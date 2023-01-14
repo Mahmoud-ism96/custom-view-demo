@@ -75,6 +75,8 @@ class MyCanvasView(context: Context) : View(context) {
                 (motionTouchEventX + currentX) / 2,
                 (motionTouchEventY + currentY) / 2
             )
+            currentX = motionTouchEventX
+            currentY = motionTouchEventY
             extraCanvas.drawPath(path, paint)
         }
         invalidate()
